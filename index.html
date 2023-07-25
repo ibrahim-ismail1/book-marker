@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kablammo&family=PT+Sans+Caption&family=Pacifico&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index-stayle.css">
+</head>
+<body>
+    <div class="home vh-100 position-relative ">
+        <div class="container d-flex flex-column justify-content-center align-items-center py-5  ">
+            <h1 class="py-2">Bookmarker</h1>
+            <hr class="py-1 hr1">
+            <p class="pL"><i class="fa-solid fa-bookmark py-2"></i> Bookmark your favorite sites  <i class="fa-solid fa-bookmark"></i></p>
+
+            
+            <div class="w-100 position-relative div1"><label for="Bname"> <i class="fa-solid fa-book-bookmark pe-2 py-2"></i>Site Name</label>
+                <i id="icon" class="icon fa-solid fa-check " ></i>
+                <input  id="Bname" placeholder="Bookmark Name" class="defo mb-1 defo1  " >
+                <p id="p1" class="ph" >invallid value !!</p>
+            </div>
+
+            <div class="w-100 position-relative"><label for="Burl"> <i class="fa-solid fa-link pe-2 py-2 "></i>Site URL</label>
+                <i  id="icon1" class="  icon fa-solid fa-check" ></i>
+                <input   id="Burl" placeholder="Website URL " class="defo mb-1" >
+                <p id="p2" class="ph" >invallid value !!</p>
+            </div>
+                
+            <button class="btn btn-danger btn-lg "onclick="AddSite()">Submit</button>
+          
+            <hr class="py-1 hr1">
+        </div>
+        <dialog id="dialog1" class=" ssd vw-100 vh-100" >
+            <div class=" ssd d-flex justify-content-center align-items-center">
+             <div class="bg-white rounded-2 p-4 shadow-lg box ">
+                 <header class="w-100 d-flex justify-content-between align-items-center mb-4">
+                     <div class="box-circles d-flex">
+                         <span class="rounded-circle me-2"></span>
+                         <span class="rounded-circle me-2"></span>
+                         <span class="rounded-circle me-2"></span>
+                     </div>
+                     <button id="Cbtn" class="btn"><i class="fa-solid fa-xmark close fs-3"></i></button>
+                    
+                 </header>
+                 <p class="p-2">
+                     Site Name or Url is not valid, Please follow the rules below :
+                 </p>
+                     <ol>
+                         <li>
+                             <i class="fa-regular fa-circle-right p-2"></i>
+                             Site name must contain at least 3 characters
+                         </li>
+                         <li>
+                             <i class="fa-regular fa-circle-right p-2"></i>
+                             Site URL must be a valid one
+                         </li>
+                     </ol>
+             </div>
+
+            </div>
+
+         </dialog>
+           
+               <div class="container">
+                <table class="table">
+                    <thead>
+                        <th>Index</th>
+                        <th>Website Name</th>
+                        <th>Visit</th>
+                        <th>Delete</th>
+                    </thead>
+                    <tbody id="tbody">
+                        
+                    </tbody>
+                </table>
+               </div>
+              
+            
+             
+    </div>
+
+    
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index-action.js"></script>
+</body>
+</html>
